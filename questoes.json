@@ -1,6 +1,20 @@
 [
     {
         "id": 1,
+        "title": "Na conta abaixo, escreva como faria no Excel?",
+        "image": "https://placehold.co/400x150/e2e8f0/475569?text=10+divido+por+7",
+        "options": ["=", "7","10","/","÷"],
+        "correctOrder": ["=", "10", "/", "7"]
+    },
+    {
+        "id": 2,
+        "title": "O que é uma célula no Excel?",
+        "image": "img/aula2-q2.png",
+        "options": ["Encontro da coluna com a linha","É a barra localizado abaixo da faixa de opções","É uma função do Excel"],
+        "correctOrder": ["Encontro da coluna com a linha"]
+    },
+    {
+        "id": 3,
         "title": "No conjunto de números abaixo, qual função devo usar para obter o maior valor?",
         "image": "img/aula2-q3.png",
         "options": ["MÍNIMO", "MÁXIMO","SOMA","PROCV","MÉDIA"],
