@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Qual fórmula calcula a média aritmética do intervalo A1 até A10?",
+        "image": "https://placehold.co/400x150/e2e8f0/475569?text=A1:A10+com+valores",
+        "options": ["=", "MÉDIA", "(", "A1:A10", ")", "SOMA", ";"],
+        "correctOrder": ["=", "MÉDIA", "(", "A1:A10", ")"]
+    },
+    {
+        "id": 2,
+        "title": "Monte a fórmula para somar os valores das células B2 e B3.",
+        "image": "",
+        "options": ["B2", "+", "=", "SOMA", "(", "B2;B3", ")"],
+        "correctOrder": ["=", "SOMA", "(", "B2;B3", ")"]
+    },
+    {
+        "id": 3,
+        "title": "Procure o valor de A1 na tabela da Matriz D1:E10 e retorne a coluna 2.",
+        "image": "https://placehold.co/400x150/e2e8f0/475569?text=PROCV+Exemplo",
+        "options": ["=", "PROCV", "(", "A1", ";", "D1:E10", ";", "2", ";", "FALSO", ")"],
+        "correctOrder": ["=", "PROCV", "(", "A1", ";", "D1:E10", ";", "2", ";", "FALSO", ")"]
+    }
+]
