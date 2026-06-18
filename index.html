@@ -126,7 +126,7 @@
             loadQuestion();
         }
 
-        // Carrega a questão na tela
+        // Carrega a questão na tela com as opções embaralhadas
         function loadQuestion() {
             isChecked = false;
             selectedWords = [];
@@ -153,6 +153,28 @@
             } else {
                 imgContainer.classList.add('hidden');
             }
+
+            // --- A MÁGICA ACONTECE AQUI ---
+            // Embaralha as opções de palavras antes de renderizar os botões na tela
+            const shuffledOptions = shuffleArray(q.options);
+
+            // Renderiza Banco de Palavras (usando a lista embaralhada)
+            const wordBank = document.getElementById('word-bank');
+            wordBank.innerHTML = '';
+            shuffledOptions.forEach((word, index) => {
+                const btn = document.createElement('button');
+                btn.innerText = word;
+                btn.id = `word-${index}`;
+                btn.className = "px-4 py-2.5 bg-white border-2 border-gray-200 active:border-gray-400 rounded-xl font-medium shadow-sm cursor-pointer text-gray-700 transition active:scale-95";
+                btn.onclick = () => selectWord(word, `word-${index}`);
+                wordBank.appendChild(btn);
+            });
+
+            // Reseta botão de ação
+            const actionBtn = document.getElementById('action-btn');
+            actionBtn.innerText = "VERIFICAR";
+            actionBtn.className = "w-full py-4 bg-green-600 text-white font-bold rounded-xl shadow-md hover:bg-green-700 transition cursor-pointer text-center";
+        }
 
             // Renderiza Banco de Palavras
             const wordBank = document.getElementById('word-bank');
